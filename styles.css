@@ -20,6 +20,10 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     border: 1px solid #14171f
 } */
 
+img {
+    width: 100%;
+}
+
 .inner-wrapper {
     width: 80%;
     margin: 0 auto;
@@ -37,8 +41,11 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 h1,
 h3,
 h4,
+h5,
 a,
-p {
+p,
+label,
+.btn {
     color: #ffffff;
 }
 
@@ -50,7 +57,11 @@ i {
 h1,
 h3,
 h4,
-.read-more {
+h5,
+.read-more,
+footer a,
+label,
+.btn {
     font-family: "italiana";
 }
 
@@ -64,15 +75,28 @@ p {
     font-family: "lato";
 }
 
+p {
+    font-weight: 300;
+}
+
+a,
+p {
+    line-height: 29px;
+}
+
+
 h1,
 h3,
-.read-more {
+h4,
+h5,
+.read-more,
+footer a,
+.btn {
     text-transform: uppercase;
 }
 
 p {
     font-size: 20px;
-    padding: 10px 0 20px 0;
 }
 
 .read-more {
@@ -93,6 +117,10 @@ header {
     background-repeat: no-repeat;
 }
 
+header .inner-wrapper {
+    padding-top: 15px;
+}
+
 .hero-text {
     padding: 135px;
     padding-right: 50%;
@@ -102,6 +130,7 @@ h1 {
     font-size: 162px;
     float: right;
     clear: both;
+    line-height: 140.4px
 }
 
 h2 {
@@ -109,6 +138,7 @@ h2 {
     font-weight: 300;
     float: right;
     clear: both;
+    line-height: 46px;
 }
 
 header a {
@@ -162,4 +192,103 @@ header a {
 
 .latest-collection h3 {
     text-align: center;
+}
+
+/* ICONS SECTION */
+
+.icons {
+    margin: 0 auto;
+}
+
+.icon {
+    float: left;
+    text-align: center;
+    font-size: 30px;
+    width: 33%;
+}
+
+i {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+
+
+/* GRID SECTION */
+
+.grid-img-1,
+.grid-img-2,
+.grid-text-1,
+.grid-text-2 {
+    width: 50%;
+}
+
+.grid-img-1, .grid-text-1 {
+    float: right;
+}
+
+.grid-img-2, .grid-text-2 {
+    float: left;
+}
+
+.grid-text-1 {
+    height: 100%;
+    padding-right: 100px;
+}
+
+.grid-text-2 {
+    padding-left: 100px;
+}
+
+.grid {
+    padding-bottom: 0;
+}
+
+/* FOOTER STYLES */
+
+h5 {
+    font-size: 25px;
+}
+
+footer a {
+    font-size: 20px;
+}
+
+footer nav,
+.newsletter-signup,
+.contact {
+    float: left;
+    width: 25%;
+}
+
+.newsletter-signup {
+    text-align: center;
+    width: 50%;
+}
+
+#email {
+    width: 65%;
+    font-family: "lato";
+    font-weight: 300;
+}
+
+label {
+    padding: 5px;
+}
+
+.btn {
+    background-color: black;
+    border: none;
+    height: 1.9em;
+}
+
+.contact h5, .contact p {
+    float: right;
+    clear: both;
+}
+
+.copyright {
+    background-color: #000;
+    text-align: center;
+    clear: both;
 }
