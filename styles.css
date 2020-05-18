@@ -49,12 +49,15 @@ a,
 p,
 label,
 .btn,
-.social {
+.social,
+header a:hover {
     color: #fff;
 }
 
 h2,
-main i {
+header li a,
+main i,
+footer a:hover {
     color: #faba63;
 }
 
@@ -117,19 +120,33 @@ a {
 }
 
 .read-more {
-    display: inline-block;
-    margin-top: 15px;
+    display: block;
+    width: 150px;
+    text-align: center;
+    margin-top: 30px;
     padding: 5px;
     border: #faba63 2px solid;
     font-size: 25px;
     line-height: 29px;
 }
 
+.read-more:hover {
+    background-color: #faba63;
+}
+
+.hand-crafted .read-more:hover {
+    color: #201e21;
+}
+
+.grid .read-more:hover {
+    color: #14171f;
+}
+
 .hand-crafted,
 .latest-collection,
 .icons,
 footer div:first-child {
-    padding: 8% 0;
+    padding: 80px 0;
 }
 
 
@@ -141,6 +158,7 @@ header {
     background-image: url("./assets/header-desktop.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: right top;
 }
 
 header .inner-wrapper {
@@ -150,7 +168,7 @@ header .inner-wrapper {
 
 .hero-text {
     padding: 135px 0 0 0;
-    width: 60%;
+    width: 50%;
 }
 
 h1 {
@@ -169,7 +187,6 @@ h2 {
 }
 
 header a {
-    color: #faba63;
     font-size: 20px;
     float: left;
     margin-right: 40px;
@@ -307,6 +324,14 @@ footer nav,
     clear: both;
 }
 
+.email:active {
+    background-color: #faba63
+}
+
+.email:focus {
+    box-shadow: 0px 0px 2px #faba63;
+}
+
 .copyright {
     background-color: #000;
     text-align: center;
@@ -324,13 +349,13 @@ footer nav,
     .grid-text-2 {
         padding: 5% 0 5% 5%;
     }
+
+    header {
+        background-position: center;
+    }
 }
 
 @media (max-width: 1100px) {
-
-    header {
-        background-size: cover;
-    }
 
     /* ajusting font size */
     p {
@@ -386,7 +411,11 @@ footer nav,
     /* adjusting header */
     
     .hero-text {
-        width: 60%;
+        width: 50%;
+    }
+
+    header {
+        background-position: center;
     }
 
     /* h1 {
@@ -453,6 +482,10 @@ footer nav,
         font-size: 2em;
     }
 
+    .social {
+        display: none;
+    }
+
     /* switch to hamburger menu */
 
     header li {
@@ -479,6 +512,17 @@ footer nav,
     /* shrink wrapper */
     .inner-wrapper {
         width: 95%;
+    }
+
+    .hand-crafted,
+    .latest-collection,
+    .icons,
+    footer div:first-child {
+        padding: 40px 0;
+    }
+
+    .read-more {
+        margin: 40px auto 0;
     }
 
     /* change to mobile header */

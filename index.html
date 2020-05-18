@@ -10,7 +10,7 @@
 </head>
 <body>
         <!-- HEADER BEGINS -->
-        <header class="clearfix">
+        <header class="clearfix" id="home">
             <button><i class="fas fa-bars"></i></button>
             <div class="inner-wrapper clearfix">
                 <nav>
@@ -30,16 +30,16 @@
             <div class="outer-wrapper">
                 <div class="social">
                     <div class="soc-btn">
-                        <i class="fab fa-instagram"></i>
+                        <a href=""><i class="fab fa-instagram"></i></a>
                     </div>
                     <div class="soc-btn">
-                        <i class="fab fa-facebook-f"></i>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
                     </div>
                     <div class="soc-btn">
-                        <i class="fab fa-snapchat-ghost"></i>
+                        <a href=""><i class="fab fa-snapchat-ghost"></i></a>
                     </div>
                     <div class="soc-btn">
-                        <i class="fab fa-twitter"></i>
+                        <a href=""><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@
         <!-- HEADER ENDS -->
         <!-- MAIN BEGINS -->
         <main>
-            <section class="hand-crafted clearfix">
+            <section class="hand-crafted clearfix" id="about">
                 <!-- INNER WRAPPER BEGINS -->
                 <div class="inner-wrapper "> 
                     <div class="img-wrapper">
@@ -61,7 +61,7 @@
                 </div>
                 <!-- INNER WRAPPER ENDS -->
             </section>
-            <section class="latest-collection clearfix">
+            <section class="latest-collection clearfix" id="gallery">
                 <!-- INNER WRAPPER BEGINS -->
                 <div class="inner-wrapper">
                     <h3>Latest Collection</h3>
@@ -86,22 +86,22 @@
                 <div class="inner-wrapper clearfix">
                     <!-- catalogue icon -->
                     <div class="icon">
-                        <i class="far fa-images"></i>
+                        <a href=""><i class="far fa-images"></i></a>
                         <h4>Catalogue</h4>
                     </div>
                     <!-- events icon -->
                     <div class="icon">
-                        <i class="far fa-calendar-alt"></i>
+                        <a href=""><i class="far fa-calendar-alt"></i></a>
                         <h4>Events</h4>                        
                     </div>                
                     <!-- collaborations icon -->
                     <div class="icon">
-                        <i class="far fa-handshake"></i>
+                        <a href=""><i class="far fa-handshake"></i></a>
                         <h4>Collaborations</h4>
                     </div>
                 </div>
             </section>
-            <section class="grid clearfix">
+            <section class="grid clearfix" id="blog">
                 <div class="outer-wrapper">
                     <div class="grid-img-1">
                         <img src="./assets/girl-necklaces-zoom.png" alt="Woman wearing two gold necklackes with pendants">
@@ -133,10 +133,10 @@
             <div class="inner-wrapper clearfix">
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="newsletter-signup">
@@ -147,7 +147,7 @@
                         <input type="submit" class="btn" value="subscribe">
                     </form>
                 </div>
-                <div class="contact">
+                <div class="contact" id="contact">
                     <h5>Contact</h5>
                     <p>info@email.com | 123 - 456 - 7890</p>
                     <p>123 some road, Toronto, ON</p>
