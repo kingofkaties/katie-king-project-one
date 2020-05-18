@@ -147,8 +147,8 @@ header .inner-wrapper {
 }
 
 .hero-text {
-    padding: 135px;
-    padding-right: 50%;
+    padding: 135px 0;
+    width: 50%;
 }
 
 h1 {
@@ -173,6 +173,10 @@ header a {
     margin-right: 40px;
 }
 
+header button {
+    display: none;
+}
+
 
 
 /* HAND-CRAFTED STYLES */
@@ -189,6 +193,8 @@ header a {
     margin-bottom: 5%; */
     max-width: 25%;
 }
+
+
 
 /* LATEST COLLECTION STYLES */
 
@@ -208,6 +214,8 @@ header a {
 .latest-collection h3 {
     text-align: center;
 }
+
+
 
 /* ICONS SECTION */
 
@@ -274,7 +282,7 @@ footer nav,
     width: 50%;
 }
 
-#email {
+.email {
     width: 65%;
     font-family: "lato";
     font-weight: 300;
@@ -300,6 +308,8 @@ footer nav,
 /* MEDIA QUERIES */
 
 @media (max-width: 1350px) {
+
+    /* ajusting grid margins */
     .grid-text-1 {
         padding: 5% 5% 5% 0;
     }
@@ -309,22 +319,194 @@ footer nav,
 }
 
 @media (max-width: 1100px) {
+
+    /* ajusting font size */
+    p {
+        font-size: 1em;
+    }
+
+    /* compressing footer */
+    footer nav,
+    .newsletter-signup,
+    .contact {
+        clear: both;
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
     footer li {
         float: left;
         margin: 15px;
     }
 
-    footer nav {
+    .newsletter-signup,
+    .contact {
+        padding-top: 5%;
+    }
+
+    .contact h5,
+    .contact p {
+        float: none;
+    }
+
+    /* adjusting header */
+    
+    .hero-text {
+        width: 60%;
+    }
+
+    /* h1 {
+        font-size: 8em;
+    } */
+}
+
+@media (max-width: 940px) {
+
+    /* ajusting grid margins */
+    .grid-text-1 {
+        padding: 2% 2% 2% 0;
+    }
+
+    .grid-text-2 {
+        padding: 2% 0 2% 2%;
+    }
+
+    /* adjusting hand-crafted margin */
+    .text-wrapper {
+        margin-left: 2%;
+    }
+
+    /* adjusting gallery margin */
+    .gallery-item:nth-of-type(2) {
+        margin: 0 15px;
+    }
+
+    .gallery-item {
+        width: calc(33.3% - 10px);
+    }
+
+    /* adjusting font sizes */
+    h3 {
+        font-size: 2em;
+    }
+
+    .read-more {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .inner-wrapper {
+        width: 90%;
+    }
+
+    /* adjusting header */
+
+    header {
+        background-size: cover;
+    }
+
+    .hero-text {
+        padding: 70px 0;
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 6em;
+        line-height: 90px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    /* switch to hamburger menu */
+
+    header li {
+        visibility: hidden;
+
+    }
+    
+}
+
+@media (max-width: 768px) {
+
+    /* shrink wrapper */
+    .inner-wrapper {
+        width: 95%;
+    }
+
+    /* change to mobile header */
+    header {
+    background-image: url("./assets/header-mobile.jpg");
+    background-size: cover;
+}
+
+    h1 {
+        font-size: 4em;
+        line-height: 60px;
+    }
+
+    h2 {
+        line-height: 30px;
+    }
+
+    .hero-text {
+        width: 50%;
+        padding-top: 50%;
+        padding-bottom: 100%;
+    }
+
+    /* make hand-crafted vertical */
+    .img-wrapper {
+        content: url("./assets/holding-3-rings.jpg");
+        width: 96%;
         margin: 0 auto;
     }
 
-    footer li:last-child {
-        color: blue;
+    .hand-crafted {
+        padding-top: 60px;
     }
 
-    footer nav,
-    .newsletter-signup,
-    .contact {
-        width: 100%;
+    h3 {
+        font-size: 2.5em;
+        padding: 40px;
     }
+
+    .text-wrapper {
+        max-width: none;
+    }
+
+    /* .read-more {
+        width: 100%;
+        margin: 15px auto;
+        display: block;
+    } */
+
+    /* hide final gallery item */
+    
+    .gallery-item:last-child {
+        display: none;
+    }
+
+    .gallery-item:nth-of-type(2) {
+        margin: 0 0 0 15px;
+    }
+
+    .gallery-item {
+        width: calc(50% - 8px);
+    }
+
+
+    /* .gallery-item {
+        width: calc(33.3% - 10px);
+    } */
+
+    /* make grid vertical */
+
+
+}
+
+@media (max-width: 480px) {
+    
 }
