@@ -335,6 +335,12 @@ footer nav,
         text-align: center;
     }
 
+    footer a {
+        text-transform: none;
+        font-family: "lato";
+        font-weight: 300;
+    }
+
     footer li {
         float: left;
         margin: 15px;
@@ -348,6 +354,21 @@ footer nav,
     .contact h5,
     .contact p {
         float: none;
+    }
+
+    .email,
+    .btn {
+        width: 100%;
+        height: 3em;
+    }
+
+    .email::placeholder {
+        text-align: center;
+    }
+
+    .btn {
+        margin-top: 10px;
+        font-size: 1.5em;
     }
 
     /* adjusting header */
@@ -497,16 +518,46 @@ footer nav,
         width: calc(50% - 8px);
     }
 
-
-    /* .gallery-item {
-        width: calc(33.3% - 10px);
-    } */
+    /* shrink icons section */
+    h4 {
+        font-size: 0.6em;
+    }
 
     /* make grid vertical */
+
+    .grid-img-1,
+    .grid-img-2,
+    .grid-text-1,
+    .grid-text-2 {
+        float: none;
+        width: 100%;
+    }
 
 
 }
 
 @media (max-width: 480px) {
     
+    /* shrink hero text */
+    h1 {
+        font-size: 3.5em;
+        line-height: 48px;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    /* stackinig icons */
+
+    .icon {
+        float: none;
+        margin: 0 auto;
+        width: 50%;
+        padding: 25px 0;
+    }
+}
+
+@media (max-width: 320px) {
+
 }
