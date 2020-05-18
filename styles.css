@@ -48,12 +48,13 @@ h5,
 a,
 p,
 label,
-.btn {
-    color: #ffffff;
+.btn,
+.social {
+    color: #fff;
 }
 
 h2,
-i {
+main i {
     color: #faba63;
 }
 
@@ -144,11 +145,12 @@ header {
 
 header .inner-wrapper {
     padding-top: 15px;
+    padding-bottom: 0;
 }
 
 .hero-text {
-    padding: 135px 0;
-    width: 50%;
+    padding: 135px 0 0 0;
+    width: 60%;
 }
 
 h1 {
@@ -175,6 +177,12 @@ header a {
 
 header button {
     display: none;
+}
+
+.social {
+    float: right;
+    font-size: 1em;
+    margin: 3%;
 }
 
 
@@ -320,6 +328,10 @@ footer nav,
 
 @media (max-width: 1100px) {
 
+    header {
+        background-size: cover;
+    }
+
     /* ajusting font size */
     p {
         font-size: 1em;
@@ -445,7 +457,19 @@ footer nav,
 
     header li {
         visibility: hidden;
+    }
 
+    header button {
+        display: block;
+        float: right;
+        background-color: #201e21;
+        border: none;
+    }
+
+    header i {
+        color: #fff;
+        font-size: 2.5em;
+        margin: 10px;
     }
     
 }
