@@ -497,7 +497,7 @@ MEDIA QUERIES
 @media (max-width: 768px) {
 
     html {
-        font-size: 70%;
+        font-size: 80%;
     }
 
     /* shrink wrapper */
@@ -575,7 +575,11 @@ MEDIA QUERIES
 @media (max-width: 480px) {
 
     html {
-        font-size: 60%;
+        font-size: 70%;
+    }
+
+    header {
+        font-size: 0.6em;
     }
 
     /* stacking icons */
