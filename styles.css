@@ -46,7 +46,7 @@ img {
 }
 
 html {
-    font-size: 1rem;
+    font-size: 100%;
 }
 
 /* colours */
@@ -71,7 +71,8 @@ p,
 label,
 .btn,
 .social,
-header a:hover {
+header a:hover,
+header i {
     color: #fff;
 }
 
@@ -102,6 +103,10 @@ footer a,
 
 /* font sizes */
 
+h1 {
+    font-size: 10.125em;
+}
+
 h3 {
     font-size: 3.1em;
 }
@@ -113,6 +118,11 @@ label {
     font-family: "lato";
 }
 
+.read-more,
+h5 {
+    font-size: 1.5625em;
+}
+
 p,
 label {
     font-weight: 300;
@@ -120,11 +130,11 @@ label {
 
 a,
 p {
-    line-height: 29px;
+    line-height: 1.8125em;
 }
 
 label {
-    line-height: 40px;
+    line-height: 3em;
 }
 
 h1,
@@ -138,13 +148,13 @@ footer a,
 }
 
 p,
-header a {
+header a,
+footer a {
     font-size: 1.25em;
 }
 
 footer p {
     font-size: 0.9375em;
-
 }
 
 a {
@@ -160,8 +170,7 @@ a {
     margin-top: 30px;
     padding: 5px;
     border: #faba63 2px solid;
-    font-size: 1.5625em;
-    line-height: 29px;
+    line-height: 1.2em;
 }
 
 .read-more:hover {
@@ -199,10 +208,9 @@ header .inner-wrapper {
 }
 
 h1 {
-    font-size: 10.125em;
     float: right;
     clear: both;
-    line-height: 140.4px
+    line-height: 0.87em;
 }
 
 h2 {
@@ -210,7 +218,6 @@ h2 {
     font-weight: 300;
     float: right;
     clear: both;
-    line-height: 46px;
 }
 
 /* nav */
@@ -270,7 +277,9 @@ LATEST COLLECTION STYLES
 
 
 
-/* ICONS SECTION */
+/* 
+ICONS SECTION 
+*/
 
 .icon {
     float: left;
@@ -284,9 +293,9 @@ i {
     margin-bottom: 15px;
 }
 
-
-
-/* GRID SECTION */
+/* 
+GRID SECTION
+*/
 
 .grid-img-1,
 .grid-img-2,
@@ -314,14 +323,6 @@ i {
 }
 
 /* FOOTER STYLES */
-
-h5 {
-    font-size: 25px;
-}
-
-footer a {
-    font-size: 20px;
-}
 
 footer nav,
 .newsletter-signup,
@@ -385,9 +386,6 @@ MEDIA QUERIES
 
 @media (max-width: 1100px) {
 
-    /* ajusting font size */
-
-
     /* compressing footer */
     footer nav,
     .newsletter-signup,
@@ -433,6 +431,10 @@ MEDIA QUERIES
 
 @media (max-width: 940px) {
 
+    html {
+        font-size: 80%;
+    }
+
     /* ajusting grid margins */
     .grid-text-1 {
         padding: 2% 2% 2% 0;
@@ -457,9 +459,6 @@ MEDIA QUERIES
     }
 
     /* adjusting font sizes */
-    h3 {
-        font-size: 2em;
-    }
 
     .inner-wrapper {
         width: 90%;
@@ -469,15 +468,6 @@ MEDIA QUERIES
 
     .hero-text {
         padding: 70px 0;
-    }
-
-    h1 {
-        font-size: 6em;
-        line-height: 90px;
-    }
-
-    h2 {
-        font-size: 2em;
     }
 
     .social {
@@ -498,7 +488,6 @@ MEDIA QUERIES
     }
 
     header i {
-        color: #fff;
         font-size: 2.5em;
         margin: 10px;
     }
@@ -506,6 +495,10 @@ MEDIA QUERIES
 }
 
 @media (max-width: 768px) {
+
+    html {
+        font-size: 70%;
+    }
 
     /* shrink wrapper */
     .inner-wrapper {
@@ -527,15 +520,7 @@ MEDIA QUERIES
     header {
         background-image: url("./assets/header-mobile.jpg");
         background-size: cover;
-    }
-
-    h1 {
-        font-size: 4em;
-        line-height: 60px;
-    }
-
-    h2 {
-        line-height: 30px;
+        font-size: 0.7em;
     }
 
     .hero-text {
@@ -556,7 +541,6 @@ MEDIA QUERIES
     }
 
     h3 {
-        font-size: 2.5em;
         padding: 40px;
     }
 
@@ -565,7 +549,6 @@ MEDIA QUERIES
     }
 
     /* hide final gallery item */
-    
     .gallery-item:last-child {
         display: none;
     }
@@ -578,11 +561,6 @@ MEDIA QUERIES
         width: calc(50% - 8px);
     }
 
-    /* shrink icons section */
-    h4 {
-        font-size: 0.6em;
-    }
-
     /* make grid vertical */
     .grid-img-1,
     .grid-img-2,
@@ -592,22 +570,15 @@ MEDIA QUERIES
         width: 100%;
     }
 
-
 }
 
 @media (max-width: 480px) {
-    
-    /* shrink hero text */
-    h1 {
-        font-size: 3.5em;
-        line-height: 48px;
+
+    html {
+        font-size: 60%;
     }
 
-    h2 {
-        font-size: 1em;
-    }
-
-    /* stackinig icons */
+    /* stacking icons */
     .icon {
         float: none;
         margin: 0 auto;
