@@ -29,6 +29,10 @@ GENERAL STYLES
 
 /* whole-page styles */
 
+html {
+    font-size: 100%;
+}
+
 img {
     width: 100%;
 }
@@ -46,20 +50,37 @@ img {
     max-width: 1200px;
 }
 
-html {
-    font-size: 100%;
+/* skip to content */
+
+.skip-to-content {
+    left: 50%;
+    position: absolute;
+    transform: translateY(-100%);
+}
+
+.skip-to-content:focus {
+    transform: translateY(0%);
+}
+
+/* section padding */
+
+.about,
+.gallery,
+.icons,
+footer div:first-child {
+    padding: 80px 0;
 }
 
 /* colours */
 
-.hand-crafted,
+.about,
 .icons,
 footer {
     background-color: #14171f;
 }
 
-.latest-collection,
-.grid {
+.gallery,
+.blog {
     background-color: #201e21;
 }
 
@@ -84,13 +105,15 @@ footer a:hover {
     color: #faba63;
 }
 
-.hand-crafted .read-more:hover {
+.about .read-more:hover {
     color: #201e21;
 }
 
-.grid .read-more:hover {
+.blog .read-more:hover {
     color: #14171f;
 }
+
+/* font families & weights */
 
 h1,
 h3,
@@ -100,6 +123,20 @@ h5,
 footer a,
 .btn {
     font-family: "italiana";
+}
+
+h2,
+header a,
+p,
+label,
+.email {
+    font-family: "lato";
+}
+
+p,
+label,
+.email {
+    font-weight: 300;
 }
 
 /* font sizes */
@@ -112,40 +149,9 @@ h3 {
     font-size: 3.1em;
 }
 
-h2,
-header a,
-p,
-label {
-    font-family: "lato";
-}
-
 .read-more,
 h5 {
     font-size: 1.5625em;
-}
-
-p,
-label {
-    font-weight: 300;
-}
-
-a,
-p {
-    line-height: 1.8125em;
-}
-
-label {
-    line-height: 3em;
-}
-
-h1,
-h3,
-h4,
-h5,
-.read-more,
-footer a,
-.btn {
-    text-transform: uppercase;
 }
 
 p,
@@ -156,6 +162,29 @@ footer a {
 
 footer p {
     font-size: 0.9375em;
+}
+
+/* line heights */
+
+a,
+p {
+    line-height: 1.8125em;
+}
+
+label {
+    line-height: 3em;
+}
+
+/* font effects */
+
+h1,
+h3,
+h4,
+h5,
+.read-more,
+footer a,
+.btn {
+    text-transform: uppercase;
 }
 
 a {
@@ -178,29 +207,24 @@ a {
     background-color: #faba63;
 }
 
-/* section padding */
 
-.hand-crafted,
-.latest-collection,
-.icons,
-footer div:first-child {
-    padding: 80px 0;
-}
 
 /* 
 HEADER STYLES 
 */
+
+header .inner-wrapper {
+    padding-top: 15px;
+    padding-bottom: 0;
+}
+
+/* hero */
 
 header {
     background-image: url("./assets/header-desktop.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
-
-header .inner-wrapper {
-    padding-top: 15px;
-    padding-bottom: 0;
 }
 
 .hero-text {
@@ -221,7 +245,7 @@ h2 {
     clear: both;
 }
 
-/* nav */
+/* header nav */
 
 header a {
     float: left;
@@ -240,8 +264,10 @@ header button {
     margin: 3%;
 }
 
+
+
 /* 
-HAND-CRAFTED STYLES 
+ABOUT STYLES 
 */
 
 .text-wrapper {
@@ -250,39 +276,39 @@ HAND-CRAFTED STYLES
     max-width: calc(75% - 5vw);
 }
 
-.hand-crafted img {
+.about img {
     float: left;
     max-width: 25%;
 }
 
+
+
 /* 
-LATEST COLLECTION STYLES 
+GALLERY STYLES 
 */
 
-.latest-collection .gallery {
+.gallery .gallery-container {
     padding: 5% 0;
 }
 
 .gallery-item {
     float: left;
-    /* width: calc(33.3% - 20px); */
     width: calc(33.3% - 1.35vw);
 
 }
 
 .gallery-item:nth-of-type(2) {
-    /* margin: 0 30px; */
     margin: 0 2vw;
 }
 
-.latest-collection h3 {
+.gallery h3 {
     text-align: center;
 }
 
 
 
 /* 
-ICONS SECTION 
+ICONS STYLES 
 */
 
 .icon {
@@ -297,8 +323,10 @@ i {
     margin-bottom: 15px;
 }
 
+
+
 /* 
-GRID SECTION
+BLOG STYLES
 */
 
 .grid-img-1,
@@ -318,14 +346,6 @@ GRID SECTION
     float: left;
 }
 
-/* .grid-text-1 {
-    padding: 10% 10% 10% 0;
-}
-
-.grid-text-2 {
-    padding: 10% 0 10% 10%;
-} */
-
 .grid-text-1 {
     padding: 5% 5% 5% 0;
 }
@@ -336,35 +356,28 @@ GRID SECTION
 
 
 
-/* FOOTER STYLES */
+/* 
+FOOTER STYLES 
+*/
+
+/* footer nav */
 
 footer nav,
-.newsletter-signup,
+.subscribe,
 .contact {
     float: left;
     width: 25%;
 }
 
-.newsletter-signup {
+/* subscribe */
+
+.subscribe {
     text-align: center;
     width: 50%;
 }
 
 .email {
     width: 65%;
-    font-family: "lato";
-    font-weight: 300;
-}
-
-.btn {
-    background-color: black;
-    border: none;
-    height: 1.9em;
-}
-
-.contact h5, .contact p {
-    float: right;
-    clear: both;
 }
 
 .email:active {
@@ -375,11 +388,29 @@ footer nav,
     box-shadow: 0px 0px 2px #faba63;
 }
 
+.btn {
+    background-color: black;
+    border: none;
+    height: 1.9em;
+}
+
+/* contact */
+
+.contact h5,
+.contact p {
+    float: right;
+    clear: both;
+}
+
+/* copyright */
+
 .copyright {
     background-color: #000;
     text-align: center;
     clear: both;
 }
+
+
 
 /* 
 MEDIA QUERIES 
@@ -394,14 +425,61 @@ MEDIA QUERIES
 }
 
 @media (max-width: 940px) {
-
+    
+    /* adjust root size */
+    
     html {
         font-size: 70%;
     }
+    
+    /* adjusting inner wrapper */
+    
+    .inner-wrapper {
+        width: 90%;
+    }
+    
+    /* adjusting header */
+    
+    .hero-text {
+        padding: 70px 0;
+    }
+    .social {
+        display: none;
+    }
 
+    /* switch to hamburger menu */
+
+    header li {
+        visibility: hidden;
+    }
+
+    header button {
+        display: block;
+        float: right;
+        background-color: #201e21;
+        border: none;
+    }
+
+    header i {
+        font-size: 2.5em;
+        margin: 10px;
+    }
+    
+    /* adjusting gallery margin */
+    
+    .gallery-item:nth-of-type(2) {
+        margin: 0 15px;
+    }
+    
+    .gallery-item {
+        width: calc(33.3% - 10px);
+    }
+    
+    
     /* compressing footer */
+
     footer nav,
-    .newsletter-signup,
+    .subscribe,
     .contact {
         clear: both;
         width: 100%;
@@ -420,7 +498,7 @@ MEDIA QUERIES
         margin: 15px;
     }
 
-    .newsletter-signup,
+    .subscribe,
     .contact {
         padding-top: 5%;
     }
@@ -444,78 +522,26 @@ MEDIA QUERIES
         text-align: center;
     }
 
-    /* ajusting grid margins */
-    .grid-text-1 {
-        padding: 2% 2% 2% 0;
-    }
-
-    .grid-text-2 {
-        padding: 2% 0 2% 2%;
-    }
-
-    /* adjusting hand-crafted margin */
-    .text-wrapper {
-        margin-left: 2%;
-    }
-
-    /* adjusting gallery margin */
-    .gallery-item:nth-of-type(2) {
-        margin: 0 15px;
-    }
-
-    .gallery-item {
-        width: calc(33.3% - 10px);
-    }
-
-    /* adjusting font sizes */
-
-    .inner-wrapper {
-        width: 90%;
-    }
-
-    /* adjusting header */
-
-    .hero-text {
-        padding: 70px 0;
-    }
-
-    .social {
-        display: none;
-    }
-
-    /* switch to hamburger menu */
-
-    header li {
-        visibility: hidden;
-    }
-
-    header button {
-        display: block;
-        float: right;
-        background-color: #201e21;
-        border: none;
-    }
-
-    header i {
-        font-size: 2.5em;
-        margin: 10px;
-    }
-    
 }
 
 @media (max-width: 768px) {
+
+    /* adjust root size */
 
     html {
         font-size: 80%;
     }
 
     /* shrink wrapper */
+
     .inner-wrapper {
         width: 95%;
     }
 
-    .hand-crafted,
-    .latest-collection,
+    /* adjust various padding & margni */
+
+    .about,
+    .gallery,
     .icons,
     footer div:first-child {
         padding: 40px 0;
@@ -526,6 +552,7 @@ MEDIA QUERIES
     }
 
     /* change to mobile header */
+
     header {
         background-image: url("./assets/header-mobile.jpg");
         background-size: cover;
@@ -538,14 +565,15 @@ MEDIA QUERIES
         padding-bottom: 100%;
     }
 
-    /* make hand-crafted vertical */
+    /* make about vertical */
+
     .img-wrapper {
         content: url("./assets/holding-3-rings.jpg");
         width: 96%;
         margin: 0 auto;
     }
 
-    .hand-crafted {
+    .about {
         padding-top: 60px;
     }
 
@@ -558,6 +586,7 @@ MEDIA QUERIES
     }
 
     /* hide final gallery item */
+
     .gallery-item:last-child {
         display: none;
     }
@@ -571,6 +600,7 @@ MEDIA QUERIES
     }
 
     /* make grid vertical */
+
     .grid-img-1,
     .grid-img-2,
     .grid-text-1,
@@ -592,7 +622,7 @@ MEDIA QUERIES
         padding-bottom: 50px;
     }
 
-    .grid h3 {
+    .blog h3 {
         text-align: center
     }
 
@@ -600,15 +630,20 @@ MEDIA QUERIES
 
 @media (max-width: 480px) {
 
+    /* adjust root size */
+
     html {
         font-size: 70%;
     }
+
+    /* adjusting hero text */
 
     header {
         font-size: 0.5em;
     }
 
     /* stacking icons */
+
     .icon {
         float: none;
         margin: 0 auto;

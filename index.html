@@ -13,6 +13,8 @@
         <!-- HEADER BEGINS -->
 
         <header class="clearfix" id="home">
+            <!-- skip to content (hidden) -->
+            <a href="#about" class="skip-to-content">Skip to main content</a>
             <!-- mobile hamburger menu -->
             <button><i class="fas fa-bars"></i></button>
             <div class="inner-wrapper clearfix">
@@ -36,19 +38,19 @@
                 <div class="social">
                     <!-- instagram icon -->
                     <div class="soc-btn">
-                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href="" aria-label="Go to Arora Jewelers' Instagram account"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     </div>
                     <!-- facebook icon -->
                     <div class="soc-btn">
-                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href="" aria-label="Go to Arora Jewelers' Facebook account"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
                     </div>
                     <!-- snapchat icon -->
                     <div class="soc-btn">
-                        <a href=""><i class="fab fa-snapchat-ghost"></i></a>
+                        <a href="" aria-label="Go to Arora Jewelers' Snapchat account"><i class="fab fa-snapchat-ghost" aria-hidden="true"></i></a>
                     </div>
                     <!-- twitter icon -->
                     <div class="soc-btn">
-                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href="" aria-label="Go to Arora Jewelers' Twitter account"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -61,7 +63,7 @@
 
             <!-- ABOUT SECTION BEGINS -->
 
-            <section class="hand-crafted clearfix" id="about">
+            <section class="about clearfix" id="about">
                 <div class="inner-wrapper "> 
                     <!-- img -->
                     <div class="img-wrapper">
@@ -79,10 +81,10 @@
             <!-- ABOUT SECTION ENDS -->
             <!-- GALLERY SECTION BEGINS -->
 
-            <section class="latest-collection clearfix" id="gallery">
+            <section class="gallery clearfix" id="gallery">
                 <div class="inner-wrapper">
                     <h3>Latest Collection</h3>
-                    <div class="gallery clearfix">
+                    <div class="gallery-container clearfix">
                         <!-- gallery item 1 -->
                         <div class="gallery-item">
                             <img src="./assets/pendants.png" alt="Gold and silver pendants hanging from chains">
@@ -125,32 +127,36 @@
             <!-- ICONS SECTION ENDS -->
             <!-- BLOG SECTION BEGINS -->
 
-            <section class="grid clearfix" id="blog">
+            <section class="blog clearfix" id="blog">
                 <div class="outer-wrapper">
-                    <!-- blog img -->
-                    <div class="grid-img-1">
-                        <img src="./assets/girl-necklaces-zoom.png" alt="Woman wearing two gold necklackes with pendants">
-                    </div>
-                    <!-- blog text -->
-                    <div class="clearfix inner-wrapper">
-                        <div class="grid-text-1">
-                            <h3>Sustainable Materials</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, eligendi aspernatur quidem quos error voluptatem. Impedit asperiores odit deleniti eligendi rerum eum architecto nostrum.</p>
-                            <a href="#" class="read-more">Read More</a>
+                    <article>
+                        <!-- blog img -->
+                        <div class="grid-img-1">
+                            <img src="./assets/girl-necklaces-zoom.png" alt="Woman wearing two gold necklackes with pendants">
                         </div>
-                    </div>
-                    <!-- blog img -->
-                    <div class="grid-img-2">
-                        <img src="./assets/rings-and-bracelet.png" alt="Hand wearing a watch and two rings">
-                    </div>
-                    <!-- blog text -->
-                    <div class="clearfix inner-wrapper">
-                        <div class="grid-text-2">
-                            <h3>Mix & Match</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit iure possimus labore ut est inventore illum aut excepturi officiis. Excepturi vel eaque impedit facere in cum atque, aliquam.</p>
-                            <a href="#" class="read-more">Read More</a>
+                        <!-- blog text -->
+                        <div class="clearfix inner-wrapper">
+                            <div class="grid-text-1">
+                                <h3>Sustainable Materials</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, eligendi aspernatur quidem quos error voluptatem. Impedit asperiores odit deleniti eligendi rerum eum architecto nostrum.</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
                         </div>
-                    </div>
+                    </article>
+                    <article>
+                        <!-- blog img -->
+                        <div class="grid-img-2">
+                            <img src="./assets/rings-and-bracelet.png" alt="Hand wearing a watch and two rings">
+                        </div>
+                        <!-- blog text -->
+                        <div class="clearfix inner-wrapper">
+                            <div class="grid-text-2">
+                                <h3>Mix & Match</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit iure possimus labore ut est inventore illum aut excepturi officiis. Excepturi vel eaque impedit facere in cum atque, aliquam.</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </section>
 
@@ -173,7 +179,7 @@
                     </ul>
                 </nav>
                 <!-- subscribe form -->
-                <div class="newsletter-signup">
+                <div class="subscribe">
                     <form action="">
                         <h5>Stay Updated</h5>
                         <label for="email">Subscribe to our newsletter to stay updated.</label>
